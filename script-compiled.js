@@ -13,13 +13,6 @@ class Stopwatch {
         };
         this.print(); // dodanie guzika reset
     }
-    save() {
-        let saveList = document.getElementById('results');
-        let save = document.createElement('li');
-        save.innerHTML = this.format(this.times);
-        saveList.appendChild(save);
-        this.saveTime();
-    }
     print() {
         this.display.innerText = this.format(this.times);
     }
@@ -75,6 +68,3 @@ stopButton.addEventListener('click', () => stopwatch.stop());
 
 let resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', () => stopwatch.reset());
-
-let saveButton = document.getElementById('save');
-stopButton.addEventListener('click', () => stopwatch.saveTime());
